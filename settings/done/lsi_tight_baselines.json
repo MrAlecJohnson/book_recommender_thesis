@@ -1,0 +1,255 @@
+[
+    {
+        "description": "Logistic regression LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "log_regression",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Naive bayes LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {}
+    },
+    {
+        "description": "SVC, rbf LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "svc",
+        "cf_params": {
+            "random_state": 50,
+            "probability": true
+        },
+        "content_algo": "svc",
+        "content_params": {
+            "random_state": 50,
+            "probability": true
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "SVC, linear LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "svc",
+        "cf_params": {
+            "random_state": 50,
+            "probability": true,
+            "kernel": "linear"
+        },
+        "content_algo": "svc",
+        "content_params": {
+            "random_state": 50,
+            "probability": true,
+            "kernel": "linear"
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "kernel": "linear",
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Decision trees, gini LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "decision_tree",
+        "cf_params": {
+            "criterion": "gini",
+            "max_depth": 100,
+            "random_state": 50
+        },
+        "content_algo": "decision_tree",
+        "content_params": {
+            "criterion": "gini",
+            "max_depth": 100,
+            "random_state": 50
+        },
+        "hybrid_algo": "decision_tree",
+        "hybrid_params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "random_state": 50
+        }
+    },
+    {
+        "description": "KNN, distance LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    },
+    {
+        "description": "KNN, distance, k3 LSI 10d",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 10,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 3,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 3,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 3,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    }
+]

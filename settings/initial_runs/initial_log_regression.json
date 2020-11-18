@@ -1,0 +1,30 @@
+[
+    {
+        "description": "Logistic regression for all three",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "lowercase": false,
+                "max_features": 10000
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "log_regression",
+        "cf_params": {
+        },
+        "content_algo": "log_regression",
+        "content_params": {
+        },
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {
+        }
+    }
+]

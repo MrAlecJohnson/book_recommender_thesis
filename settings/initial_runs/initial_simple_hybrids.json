@@ -1,0 +1,79 @@
+[
+    {
+        "description": "Naive bayes with rating hybrid",
+        "vectoriser": "tfidf",
+        "vectoriser_params": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "max_features": 10000,
+                "lowercase": false
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+        },
+        "hybrid_algo": "confidence",
+        "hybrid_params": {
+        }
+    },
+    {
+        "description": "Naive bayes with average rating hybrid",
+        "vectoriser": "tfidf",
+        "vectoriser_params": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "max_features": 10000,
+                "lowercase": false
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+        },
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {
+        }
+    },
+    {
+        "description": "Check the new best of 3 hybridiser works",
+        "vectoriser": "separate",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 100,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+        },
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {
+        }
+    }
+]

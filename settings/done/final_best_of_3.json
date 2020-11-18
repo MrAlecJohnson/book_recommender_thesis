@@ -1,0 +1,108 @@
+[
+    {
+        "description": "Separate vectors - naive bayes, knn, bo3",
+        "vectoriser": "separate",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 100,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "best_of_3",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Separate vectors - naive bayes/log regression/bo3",
+        "vectoriser": "separate",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 100,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "best_of_3",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Separate vectors - naive bayes/naive bayes/bo3",
+        "vectoriser": "separate",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 100,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "best_of_3",
+        "hybrid_params": {}
+    }
+]

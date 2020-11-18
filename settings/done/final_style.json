@@ -1,0 +1,117 @@
+[
+    {
+        "description": "Style vectors - naive bayes, knn, log regression",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes, knn, svc",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Style vectors - naive bayes/log regression/svc",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Style vectors - naive bayes/naive bayes/svc",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Style vectors - naive bayes/log regression/naive bayes",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/log regression/log regression",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/naive bayes/log regression",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    }
+]

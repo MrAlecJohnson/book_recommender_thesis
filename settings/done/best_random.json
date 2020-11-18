@@ -1,0 +1,37 @@
+[
+    {
+        "description": "LSI - naive bayes/log regression/rating",
+        "vectoriser": "random",
+        "vectoriser_params": {
+            "random_state": 50,
+            "length": 100
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Combined vectors - naive bayes, knn, svc",
+        "vectoriser": "random",
+        "vectoriser_params": {
+            "random_state": 50,
+            "length": 100
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    }
+]

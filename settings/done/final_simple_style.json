@@ -1,0 +1,94 @@
+[
+    {
+        "description": "Style vectors - naive bayes, knn, confidence",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/log regression/confidence",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/naive bayes/confidence",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes, knn, rating",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/log regression/rating",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Style vectors - naive bayes/naive bayes/rating",
+        "vectoriser": "style",
+        "vectoriser_params": {
+            "location": "models/features.pkl",
+            "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    }
+]

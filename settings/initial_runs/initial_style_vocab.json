@@ -1,0 +1,48 @@
+[
+    {
+        "description": "Combined vectors test",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    }
+]

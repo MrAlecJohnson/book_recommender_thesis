@@ -1,0 +1,38 @@
+[
+    {
+        "description": "KNN for CF and content",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    }
+]

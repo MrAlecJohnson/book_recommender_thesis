@@ -1,0 +1,38 @@
+[
+    {
+        "description": "Decision tree for all three",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "decision_tree",
+        "cf_params": {
+            "criterion": "gini",
+            "max_depth": 100,
+            "random_state": 50
+        },
+        "content_algo": "decision_tree",
+        "content_params": {
+            "criterion": "gini",
+            "max_depth": 100,
+            "random_state": 50
+        },
+        "hybrid_algo": "decision_tree",
+        "hybrid_params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "random_state": 50
+        }
+    }
+]

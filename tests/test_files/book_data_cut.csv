@@ -1,0 +1,3 @@
+Catalogue number,Gutenberg title,Goodreads title,Goodreads ID,Gutenberg author,Goodreads author,Author ID,Publication year,Average rating,Review count,Text review count,Subjects,File,Name matches,Title matches,Reviews capped
+500,The Adventures of Pinocchio,The Adventures Of Pinocchio,6059070,C. Collodi--Pseudonym of Carlo Lorenzini,Carlo Collodi,15123,1883,3.86,66485,2231,"['PZ', 'PQ', 'Puppets -- Juvenile fiction', 'Pinocchio (Fictitious character) -- Juvenile fiction', 'Fairy tales']",data/gutenberg_text/500.txt,2,4,10000
+9993,Captivating Mary Carstairs,Captivating Mary Carstairs,14327844,Henry Sydnor Harrison,Henry Sydnor Harrison,991755,2000,3.5,2,0,"['Fiction', 'PS']",data/gutenberg_text/9993.txt,3,3,2

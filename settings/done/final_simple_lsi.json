@@ -1,0 +1,178 @@
+[
+    {
+        "description": "LSI - naive bayes, knn, confidence",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "LSI - naive bayes/log regression/confidence",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "LSI - naive bayes/naive bayes/confidence",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "confidence",
+        "hybrid_params": {}
+    },
+    {
+        "description": "LSI - naive bayes, knn, rating",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    },
+    {
+        "description": "LSI - naive bayes/log regression/rating",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    },
+    {
+        "description": "LSI - naive bayes/naive bayes/rating",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [
+                    1,
+                    1
+                ],
+                "min_df": 2,
+                "max_features": 50000,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "book_rating",
+        "hybrid_params": {}
+    }
+]

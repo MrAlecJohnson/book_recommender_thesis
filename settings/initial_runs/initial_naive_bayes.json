@@ -1,0 +1,25 @@
+[
+    {
+        "description": "Naive bayes for all three",
+        "vectoriser": "tfidf",
+        "vectoriser_params": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "max_features": 10000,
+                "lowercase": false
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+            "fit_prior": false
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+            "fit_prior": false
+        },
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {
+            "fit_prior": false
+        }
+    }
+]

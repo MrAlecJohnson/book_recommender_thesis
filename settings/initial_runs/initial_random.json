@@ -1,0 +1,22 @@
+[
+    {
+        "description": "Naive bayes for all three - random, no priors",
+        "vectoriser": "random",
+        "vectoriser_params": {
+            "random_state": 50,
+            "length": 100
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+            "fit_prior": false
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+            "fit_prior": false
+        },
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {
+            "fit_prior": false
+        }
+    }
+]

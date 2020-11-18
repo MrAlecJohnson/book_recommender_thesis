@@ -1,0 +1,33 @@
+[
+    {
+        "description": "SVC for all three",
+        "vectoriser": "lsi",
+        "vectoriser_params": {
+            "normalise": true,
+            "tfidf": {
+                "analyzer": "word",
+                "ngram_range": [1, 1],
+                "min_df": 2,
+                "lowercase": false
+            },
+            "lsi": {
+                "n_components": 100,
+                "algorithm": "randomized",
+                "random_state": 50
+            }
+        },
+        "cf_algo": "svc",
+        "cf_params": {
+            "random_state": 50,
+            "probability": true
+        },
+        "content_algo": "svc",
+        "content_params": {
+            "random_state": 50,
+            "probability": true
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+        }
+    }
+]

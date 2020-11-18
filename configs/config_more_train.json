@@ -1,0 +1,16 @@
+{
+    "csv_main": "results/main_results.csv",
+    "csv_averages": "results/averaged_results.csv",
+    "csv_test_set": "results/test_set_results.csv",
+    "3_vector_main": "results/3_vector_main_results.csv",
+    "3_vector_averages": "results/3_vector_averaged_results.csv",
+    "3_vector_test_set": "results/3_vector_test_set_results.csv",
+    "min_user_ratings": 10,
+    "min_book_ratings": 5,
+    "threshold": 4,
+    "random_state": 50,
+    "min_proportion_positive": 0.2,
+    "max_proportion_positive": 0.8,
+    "training_proportion": 0.9,
+    "training_run": true
+}

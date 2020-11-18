@@ -1,0 +1,99 @@
+[
+    {
+        "description": "Logistic regression style normalised",
+        "vectoriser": "style",
+        "vectoriser_params": {
+                "location": "models/features.pkl",
+                "normalise": true
+        },
+        "cf_algo": "log_regression",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Logistic regression style unnormalised",
+        "vectoriser": "style",
+        "vectoriser_params": {
+                "location": "models/features.pkl",
+                "normalise": false
+        },
+        "cf_algo": "log_regression",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "KNN, distance, k5, style normalised",
+        "vectoriser": "style",
+        "vectoriser_params": {
+                "location": "models/features.pkl",
+                "normalise": true
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    },
+    {
+        "description": "KNN, distance, k5, style unnormalised",
+        "vectoriser": "style",
+        "vectoriser_params": {
+                "location": "models/features.pkl",
+                "normalise": false
+        },
+        "cf_algo": "knn",
+        "cf_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "knn",
+        "hybrid_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        }
+    },
+    {
+        "description": "Test style vectors with naive bayes",
+        "vectoriser": "style",
+        "vectoriser_params": {
+                "location": "models/features.pkl",
+                "normalise": true
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {
+        },
+        "content_algo": "naive_bayes",
+        "content_params": {
+        },
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {
+        }
+    }
+]

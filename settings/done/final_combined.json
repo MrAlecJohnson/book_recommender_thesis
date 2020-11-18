@@ -1,0 +1,257 @@
+[
+    {
+        "description": "Combined vectors - naive bayes, knn, log regression",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Combined vectors - naive bayes, knn, svc",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "knn",
+        "content_params": {
+            "n_neighbors": 5,
+            "metric": "minkowski",
+            "weights": "distance"
+        },
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Combined vectors - naive bayes/log regression/svc",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Combined vectors - naive bayes/naive bayes/svc",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "svc",
+        "hybrid_params": {
+            "random_state": 50,
+            "probability": true
+        }
+    },
+    {
+        "description": "Combined vectors - naive bayes/log regression/naive bayes",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "naive_bayes",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Combined vectors - naive bayes/log regression/log regression",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "log_regression",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    },
+    {
+        "description": "Combined vectors - naive bayes/naive bayes/log regression",
+        "vectoriser": "combined",
+        "vectoriser_params": {
+            "vocab": {
+                "normalise": true,
+                "tfidf": {
+                    "analyzer": "word",
+                    "ngram_range": [
+                        1,
+                        1
+                    ],
+                    "min_df": 2,
+                    "max_features": 50000,
+                    "lowercase": false
+                },
+                "lsi": {
+                    "n_components": 8,
+                    "algorithm": "randomized",
+                    "random_state": 50
+                }
+            },
+            "style": {
+                "location": "models/features.pkl",
+                "normalise": true
+            }
+        },
+        "cf_algo": "naive_bayes",
+        "cf_params": {},
+        "content_algo": "naive_bayes",
+        "content_params": {},
+        "hybrid_algo": "log_regression",
+        "hybrid_params": {}
+    }
+]
